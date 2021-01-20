@@ -9,7 +9,7 @@ def do_magic():
 
 def application(env, start_response):
     start_response('200 OK',[('Content-type','text\html')])
-    return  [do_magic()]
+    return  [do_magic().encode()]
 
 
 
