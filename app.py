@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import datetime
+import os
 
 def pr():
     now =datetime.datetime.now()
@@ -8,5 +9,6 @@ def pr():
 
 
 if __name__== "__main__":
-    print("Content-type: text-html\n\n")
+    if "REQUEST_URI" in os.environ:
+        print("Content-type: text-html\n\n")
     pr()
