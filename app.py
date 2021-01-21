@@ -8,7 +8,7 @@ def do_magic():
     return "Hello {0}".format(now) 
 
 def application(env, start_response):
-    start_response('200 OK',[('Content-type','text\html')])
+    start_response('200 OK',[('Content-Type','text\html')])
     return  [do_magic().encode()]
 
 
